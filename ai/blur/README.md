@@ -29,6 +29,15 @@
 # 회고
 > conv관련 배운점 요약
 
+
+## 느낀점 / 아쉬운점
+
+- Depthwise separable convolution에서 헷갈리는 부분들을 정리하다보니, 실험에 크게 힘을 쏟지는 못했던 것 같다.
+- Atrous Convolution의 rate로 띄워지는 공간이 채워지는 줄 알았는데, 알고보니 그냥 크기만 키우는 방식이었다.
+- depth prediction에 대해서 좀 더 깊게 파보고 싶다는 생각을 했다.
+
+## 배운점
+
 #### Standard Conv Layer
 
 ![](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FdiQ1OC%2FbtqF9CF0J2F%2FbXeMQ23BAHATAswUEYWuJ1%2Fimg.png)
@@ -67,7 +76,6 @@ $$
 
 - [Andrew Ng's lecture](https://www.youtube.com/watch?v=c1RBQzKsDCk)
 
-![](..... 스크린샷)
 
 Point-wise conv는 커널 크기가 1x1로 고정된 convolution Layer를 말한다. 이때 point wise conv가 1x1이더라도, kernel의 차원 수는 input channel을 따른다는 것이다. (매우 헷갈렸던 것 중에 하나가, 1x1x1인지 아닌지 였고, 결론은 `1 x 1 x inputchannel`이다.)
 
@@ -76,7 +84,6 @@ Standard conv layer도 생각해보면 input channel들을 모두 더하고 bias
 - Input의 채널들을 하나로 합쳤다고 볼 수 있다. (Standard Conv layer와 동일)
 - 1x1로 sliding하기 때문에 Spatial Feature들은 추출하지 못한다. (Standard Conv의 kernel_size=3 라면 3x3 영역에서 픽셀간의 상관관계를 얻을 수 있음)
 
-![](..... 스크린샷)
 
 (28,28,192)에 대해서 1x1 conv(weight가 192개인 1x1x192)를 통과시키면, (28 x 28) 크기의 feature map이 만들어진다. 이때 filter 갯수가 32개라고 한다면, 이를 32번 반복하여, (28,28,32)의 feature map을 만들어낼 수 있다.
 
@@ -133,7 +140,8 @@ Standard conv layer도 생각해보면 input channel들을 모두 더하고 bias
 
 
 #### Atrous Convolution
-> Atrous Conv의 Q. 빈공간은 뭐로 채워지는 건가? 
+> Atrous Conv의 Q. 빈공간은 뭐로 채워지는 건가? 안채워도 된다.
 
 - Contextual Information을 더 잘 반영하기 위해서는 Receptive Field를 확장할 필요가 있다.
 - [Atrous convolution(dilated convolution)](https://better-tomorrow.tistory.com/entry/Atrous-Convolution)
+
