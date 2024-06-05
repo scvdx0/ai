@@ -1,5 +1,4 @@
 ### 회고
-<img width="1289" alt="Screenshot 2024-05-29 at 4 45 35 PM" src="https://github.com/minkj1992/ai/assets/37536298/c24ce076-23dc-434a-863a-43838261eb14">
 
 1. [x] 자기만의 카메라앱 기능 구현을 완수하였다.
 2. [x] 스티커 이미지를 정확한 원본 위치에 반영하였다.
