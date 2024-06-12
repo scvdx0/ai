@@ -141,7 +141,7 @@ Standard conv layer도 생각해보면 input channel들을 모두 더하고 bias
 데이터의 가장 중요한 특징을 포착하는 압축된 표현을 학습
 
 
-#### Atrous Convolution
+#### Atrous Convolution 
 > Atrous Conv의 Q. 빈공간은 뭐로 채워지는 건가? 안채워도 된다.
 
 - Contextual Information을 더 잘 반영하기 위해서는 Receptive Field를 확장할 필요가 있다.
