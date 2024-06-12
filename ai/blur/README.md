@@ -39,6 +39,7 @@
 - depth prediction에 대해서 좀 더 깊게 파보고 싶다는 생각을 했다.
 
 ## 배운점
+> https://minkj1992.github.io/conv/
 
 #### Standard Conv Layer
 
